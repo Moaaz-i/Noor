@@ -817,7 +817,9 @@ html[dir='rtl'] .hero-verse { border-radius: var(--radius) 0 0 var(--radius); }
   font-weight: 700;
   color: var(--color-gold);
   padding-top: 0.55rem;
-  white-space: nowrap;
+  /* يلتف داخل عموده (6rem) بدل أن يفيض خلف البطاقة المعتمة ويتغطى */
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 .event-card {
   position: relative;
