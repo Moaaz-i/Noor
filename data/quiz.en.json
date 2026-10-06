@@ -1,0 +1,42 @@
+{
+  "title": "Test your knowledge",
+  "intro": "Six short questions covering the pillars, beliefs and seerah. Pick one answer per question and get instant feedback.",
+  "questions": [
+    {
+      "q": "How many pillars does Islam have?",
+      "options": ["Three", "Four", "Five", "Seven"],
+      "answer": 2,
+      "why": "Five: the two testifications, prayer, alms-giving, fasting and the pilgrimage for those able."
+    },
+    {
+      "q": "What is the condition without which the first testification is not valid?",
+      "options": ["Intention", "Monotheism — worship of God alone", "Pilgrimage", "Memorising the whole Qur’an"],
+      "answer": 1,
+      "why": "“There is no god but God” denies polytheism and affirms God’s oneness — the foundation of the religion."
+    },
+    {
+      "q": "Which book is the primary source of Islamic law?",
+      "options": ["The Gospel", "The Torah", "The Qur’an", "The Psalms"],
+      "answer": 2,
+      "why": "The Qur’an, revealed to the Prophet Muhammad ﷺ, is the criterion against which other texts are measured."
+    },
+    {
+      "q": "In which year was the Prophet Muhammad ﷺ born?",
+      "options": ["570 CE — the Year of the Elephant", "610 CE", "632 CE", "500 CE"],
+      "answer": 0,
+      "why": "He ﷺ was born around 570 CE in Mecca and died in 632 CE in Medina."
+    },
+    {
+      "q": "What is the first thing a Muslim does upon entering a mosque?",
+      "options": ["Bowing", "Two rak‘ahs of greeting the mosque", "The adhan", "Standing for the iqamah"],
+      "answer": 1,
+      "why": "It is sunnah to pray two rak‘ahs of greeting the mosque before sitting or joining the prayer."
+    },
+    {
+      "q": "Which of these is NOT encouraged by Islam?",
+      "options": ["Truthfulness", "Trustworthiness", "Cheating in trade", "Honouring one’s parents"],
+      "answer": 2,
+      "why": "Cheating is condemned: “Whoever cheats is not one of us.”"
+    }
+  ]
+}

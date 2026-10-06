@@ -1,0 +1,75 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+# صلاحيات النشر على Pages عبر هوية الدخول المؤقتة (OIDC) — بلا tokens يدوية.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# نشر واحداً في المقابل؛ الأقدم يُلغى إن جاء نشر أحدث أثناء عمله.
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check configuration
+        run: npm run check
+
+      - name: Lint pages
+        run: npm run lint
+
+      - name: Export static site
+        run: npm run export
+
+      # تفعيل Pages آلياً إن لم يكن مفعّلاً بعد (أفضل جهد: قد يرفضه GITHUB_TOKEN
+      # فيكتفي التحذير ويكمل، ويبقى التفعيل يدوياً مرة واحدة فقط).
+      - name: Enable GitHub Pages (best effort)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" >/dev/null 2>&1; then
+            echo "GitHub Pages is already enabled."
+          else
+            gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow \
+              && echo "GitHub Pages enabled automatically." \
+              || echo "::warning::تعذّر تفعيل Pages تلقائياً — فعّله مرة واحدة: Settings → Pages → Source: GitHub Actions"
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

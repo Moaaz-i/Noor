@@ -1,0 +1,20 @@
+{
+  "name": "Noor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "نُور — تعرّف على الإسلام: موقع تعريفي ثنائي اللغة (عربي/إنجليزي) لتعريف الإسلام وتعليمه، مبني على مكتبة jprot",
+  "scripts": {
+    "start": "jprot",
+    "dev": "jprot",
+    "check": "jprot check",
+    "lint": "jprot lint",
+    "export": "jprot export --out dist --clean"
+  },
+  "dependencies": {
+    "jprot": "^0.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

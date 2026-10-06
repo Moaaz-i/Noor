@@ -1,0 +1,28 @@
+{
+  "terms": [
+    { "term": "Tawhid", "latin": "التوحيد", "def": "The oneness of God in worship, lordship and His names and attributes; the root of the religion and the centre of every message." },
+    { "term": "Iman", "latin": "الإيمان", "def": "Faith in God, His angels, books, messengers, the Last Day and divine decree — good and bad from it." },
+    { "term": "Islam", "latin": "الإسلام", "def": "Submitting to God by following His guidance; it covers belief, speech and action." },
+    { "term": "Ihsan", "latin": "الإحسان", "def": "To worship God as if you see Him — for even if you do not see Him, He sees you." },
+    { "term": "Shahada", "latin": "الشهادة", "def": "The testification that there is no god but God and that Muhammad is His messenger; the entry into the faith." },
+    { "term": "Salah", "latin": "الصلاة", "def": "Prayer fixed at five times a day; the pillar of the faith and the first thing a servant is judged on." },
+    { "term": "Zakat", "latin": "الزكاة", "def": "An obligatory share of wealth given to the poor; it purifies money and makes it grow." },
+    { "term": "Sawm", "latin": "الصوم", "def": "Fasting from dawn to sunset during Ramadan in obedience to God." },
+    { "term": "Hajj", "latin": "الحج", "def": "The pilgrimage to the House of God in its prescribed seasons, for those able to make the journey." },
+    { "term": "Sunnah", "latin": "السنة", "def": "What is attributed to the Prophet ﷺ in sayings, actions and approvals; the second source of law." },
+    { "term": "Adl", "latin": "العدل", "def": "Putting everything in its rightful place; binding on rulers and ruled alike, and the rule of judgement." },
+    { "term": "Rahma", "latin": "الرحمة", "def": "Mercy and tenderness toward those in need; an attribute of God and a quality of the believers." },
+    { "term": "Birr", "latin": "البرّ", "def": "Perfecting one’s duty to God and to people — including kinship and honouring parents." },
+    { "term": "Hilm", "latin": "الحِلم", "def": "Refraining from revenge when one has the power to take it; a sign of strength, not weakness." },
+    { "term": "Sidq", "latin": "الصدق", "def": "Words matching reality; a path to Paradise and a sign of sincere intention." },
+    { "term": "Amana", "latin": "الأمانة", "def": "Safeguarding what one is trusted with — wealth, secrets or office; a condition for stewardship on earth." },
+    { "term": "ʿAhd", "latin": "العهد", "def": "A binding pledge linking its owner to a duty, contract or covenant." },
+    { "term": "Shafaʿa", "latin": "الشفاعة", "def": "Intercession on the Day of Judgement by God’s permission — by prophets, scholars and believers." },
+    { "term": "Qiyama", "latin": "القيامة", "def": "The Day of Resurrection, judgement, Paradise and Hell; the goal of belief and the root of hope." },
+    { "term": "Khalifa", "latin": "الخليفة", "def": "One who governs God’s earth by His command; a description of humanity’s stewardship of it." },
+    { "term": "Amr bil-Maʿruf", "latin": "الأمر بالمعروف", "def": "Calling people to what religion agrees is good; a communal duty and a rule for a healthy society." },
+    { "term": "Nahy ʿan al-Munkar", "latin": "النهي عن المنكر", "def": "Turning people away from what religion agrees is evil; a condition for good to endure." },
+    { "term": "Qiyas", "latin": "القياس", "def": "Analogical reasoning: extending a ruling to a new case sharing its cause; a source of law." },
+    { "term": "Ijtihad", "latin": "الاجتهاد", "def": "Exerting scholarly effort to derive a ruling from its evidence; required when no explicit text exists." }
+  ]
+}
