@@ -144,6 +144,13 @@
               if (LANG === 'ar') return u.indexOf('/en/') === -1
               return u.indexOf('/ar/') === -1
             })
+            // عند وجود مسار نشر (/Noor) يعيد jprot كتابة الرابط مرتين: يلبّس
+            // search.json بالبادئة ثم يضيفها ثانياً في قالب رابط النتيجة،
+            // فتصير /Noor/Noor/… وتُرجع 404. نُزيل البادئة من البيانات هنا،
+            // فيضيف القالب البادئة مرة واحدة فقط.
+            for (var i = 0; i < filtered.length; i++) {
+              if (filtered[i]) filtered[i].url = stripBase(String(filtered[i].url || ''))
+            }
             return new Response(JSON.stringify(filtered), {
               status: 200,
               headers: { 'content-type': 'application/json' },
@@ -152,6 +159,23 @@
       })
     }
   }
+
+  // jprot يُغلق لوحة البحث عند Enter فقط؛ أما بالنقر بالفأرة على نتيجة
+  // فينتقل إلى الصفحة وتبقى اللوحة مفتوحة فوقها. نغلقها لحظة النقر دون
+  // مساس بالتنقل التي يتولاها jprot بنفسه.
+  document.addEventListener(
+    'click',
+    function (e) {
+      var a = e.target && e.target.closest && e.target.closest('.search-result')
+      if (!a) return
+      var ov = document.querySelector('.search-overlay')
+      if (!ov) return
+      ov.classList.remove('open')
+      var inp = ov.querySelector('.search-input')
+      if (inp) inp.value = ''
+    },
+    true,
+  )
 
   /* ---------------------------------------------------------------
    * 3 — الاختبار.
